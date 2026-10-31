@@ -1,95 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#06152b">
-  <meta name="description" content="Observatório de Práticas IA: experiências pedagógicas organizadas por recurso digital.">
-  <title>Recursos digitais | Observatório de Práticas IA</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="recursos.js" defer></script>
-  <script src="praticas.js" defer></script>
-  <script src="app.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Observatório de Práticas IA — Recursos Digitais 2.0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
-  <header class="site-header" id="inicio">
-    <a class="wordmark" href="#inicio" aria-label="Observatório de Práticas IA — início">
-      <span class="brand-glyph" aria-hidden="true">
-        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M22 36c-4-3.5-10-4.7-17-4.1V10c7-.8 13 .9 17 5 4-4.1 10-5.8 17-5v21.9c-7-.6-13 .6-17 4.1Z"/><path d="M22 15v21M8.5 16c3.4-.3 6.7.5 9.8 2.3M8.5 22c3.4-.3 6.7.5 9.8 2.3M35.5 16c-3.4-.3-6.7.5-9.8 2.3M35.5 22c-3.4-.3-6.7.5-9.8 2.3"/></svg>
-      </span>
-      <span class="brand-title">OBSERVATÓRIO <small>DE PRÁTICAS IA</small></span>
-    </a>
-    <nav class="site-nav" aria-label="Navegação principal">
-      <a href="#recursos">Recursos digitais</a>
-      <a href="#sobre">Sobre a proposta</a>
-      <button class="nav-edit" id="abrirEditor" type="button" title="As alterações ficam neste navegador até exportar o arquivo">Gerenciar acervo <span aria-hidden="true">↗</span></button>
-    </nav>
-  </header>
-  <main>
-    <section class="hero shell" aria-labelledby="tituloPrincipal">
-      <div class="hero-stars" aria-hidden="true"></div>
-      <div class="hero-globe" aria-hidden="true"><div class="globe-inner"></div><i class="node n1"></i><i class="node n2"></i><i class="node n3"></i><i class="node n4"></i></div>
-      <div class="eyebrow"><span></span> OBSERVATÓRIO DE PRÁTICAS IA <span></span></div>
-      <h1 id="tituloPrincipal">Explore por <strong>recurso digital</strong></h1>
-      <p class="hero-lead">Práticas docentes organizadas por ferramenta</p>
-      <p class="hero-explainer">Um acervo para descobrir como educadores transformam recursos digitais em experiências de aprendizagem.</p>
-      <div class="hero-pills" aria-label="Princípios da plataforma">
-        <span>✦ Educação</span><span>✦ Tecnologia</span><span>✦ Práticas reais</span>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-topline">
+        <span class="topline-side">EDUCAÇÃO<br>TECNOLOGIA<br>PRÁTICAS REAIS</span>
+        <span class="topline-center">OBSERVATÓRIO DE PRÁTICAS IA</span>
+        <span class="topline-side right">DOCENTES<br>IDEIAS<br>TERRITÓRIOS<br>POSSIBILIDADES</span>
       </div>
-    </section>
 
-    <section class="directory shell" id="recursos" aria-labelledby="recursosTitle">
-      <div class="section-heading">
-        <div><p class="section-kicker">BIBLIOTECA DE RECURSOS</p><h2 id="recursosTitle">Encontre uma ferramenta. Explore uma prática.</h2></div>
-        <div class="count-panel"><strong id="resourceCount">28</strong><span>recursos no acervo</span></div>
-      </div>
-      <div class="toolbar" role="search">
-        <label class="searchbox" for="pesquisa"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.4 15.4 5.1 5.1"/></svg><input id="pesquisa" type="search" placeholder="Buscar ferramenta ou finalidade pedagógica..." autocomplete="off"><kbd>/</kbd></label>
-        <label class="category-label" for="categoriaFiltro">Categoria <select id="categoriaFiltro" aria-label="Filtrar por categoria"><option value="todas">Todas as categorias</option></select></label>
-      </div>
-      <div class="filter-chips" id="chips" aria-label="Filtros rápidos"></div>
-      <div id="resultStatus" class="result-status" role="status" aria-live="polite"></div>
-      <div class="resource-grid" id="resourceGrid"></div>
-      <div class="nothing" id="noResults" hidden><span aria-hidden="true">⌕</span><h3>Nenhum recurso encontrado</h3><p>Tente outra palavra ou escolha a opção “Todas as categorias”.</p><button type="button" id="limparFiltros" class="outline-button">Limpar filtros</button></div>
-    </section>
-    <section class="principles shell" id="sobre" aria-labelledby="sobreTitle">
-      <div class="principles-copy"><p class="section-kicker">PROPÓSITO DO OBSERVATÓRIO</p><h2 id="sobreTitle">A prática docente vem primeiro.</h2><p>O objetivo da plataforma não é apenas indicar aplicativos. Cada ferramenta abre um espaço dedicado às experiências pedagógicas desenvolvidas com ela: objetivos, metodologias, resultados, adaptações e links compartilhados por educadores.</p></div>
-      <div class="principles-list"><div><b>01</b><span>Compartilhar experiências</span></div><div><b>02</b><span>Valorizar a intencionalidade pedagógica</span></div><div><b>03</b><span>Inspirar novas práticas</span></div></div>
-    </section>
-  </main>
-  <footer class="site-footer shell"><span>OBSERVATÓRIO DE PRÁTICAS IA</span><span>Conhecimento · Formação · Inovação</span><span>O plano está pronto. A aula, não.</span></footer>
+      <h1>Explore por <span>recurso digital</span></h1>
+      <p class="hero-subtitle">Práticas docentes organizadas por ferramenta</p>
 
-  <dialog id="resourceDialog" class="resource-dialog" aria-labelledby="detailTitle">
-    <div class="dialog-inner">
-      <div class="dialog-top"><span class="modal-label">ACERVO DE PRÁTICAS DOCENTES</span><button type="button" class="close-icon" id="fecharDetalhe" aria-label="Fechar">×</button></div>
-      <div class="detail-head"><div class="detail-logo"><img id="detailImage" src="" alt=""></div><div><p id="detailGroup" class="section-kicker"></p><h2 id="detailTitle"></h2><p id="detailDesc" class="detail-subtitle"></p></div></div>
-      <div class="detail-divider"></div>
-      <div class="detail-controls"><h3>Experiências compartilhadas <span id="detailNum"></span></h3><button type="button" id="detalheAdicionar" class="small-add">+ Cadastrar prática</button></div>
-      <div id="practiceList" class="practice-list"></div>
-      <div class="empty-practices" id="emptyPractices" hidden><span class="empty-orb" aria-hidden="true">✧</span><h3>Em construção</h3><p>Ainda não há práticas publicadas com este recurso. Ao cadastrar experiências, elas aparecerão aqui com seus links e informações pedagógicas.</p></div>
-      <p class="local-disclaimer" id="localDisclaimer" hidden>Prévia local: estes dados estão salvos apenas neste navegador. Exporte <code>praticas.js</code> e publique o arquivo para que todos vejam.</p>
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="Pesquisar recursos e finalidades pedagógicas..." />
+        <select id="categoryFilter">
+          <option value="Todas">Todas as categorias</option>
+        </select>
+      </div>
+
+      <div class="toolbar-meta">
+        <span id="resultsCount">28 recursos encontrados</span>
+        <div class="chip-group" id="chipGroup"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="cards-grid" id="cardsGrid"></section>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Fechar">×</button>
+      <div class="modal-kicker">ACERVO DE PRÁTICAS</div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <div class="modal-empty">
+        <div class="spark">✦</div>
+        <strong>Seção em construção</strong>
+        <p>Esta ferramenta abrirá as práticas docentes cadastradas no Observatório de Práticas IA.</p>
+      </div>
     </div>
-  </dialog>
+  </div>
 
-  <dialog id="editorDialog" class="editor-dialog" aria-labelledby="editTitle">
-    <div class="dialog-inner">
-      <div class="dialog-top"><span class="modal-label">GESTÃO LOCAL DO ACERVO</span><button type="button" class="close-icon" id="fecharEditor" aria-label="Fechar">×</button></div>
-      <h2 id="editTitle">Cadastrar prática pedagógica</h2>
-      <p class="editor-info">Cadastre os links de experiências desenvolvidas com as ferramentas. O salvamento é local; para publicar no site, use “Exportar praticas.js” e substitua o arquivo no GitHub.</p>
-      <form id="practiceForm" class="practice-form">
-        <label>Recurso digital <select name="recurso" id="editorResource" required></select></label>
-        <label>Título da prática <input name="titulo" placeholder="Ex.: Avaliação formativa com formulários" maxlength="130" required></label>
-        <div class="form-2"><label>Área do conhecimento <select name="area"><option value="Interdisciplinar">Interdisciplinar</option><option>Ciências Humanas</option><option>Ciências da Natureza</option><option>Linguagens e Códigos</option><option>Matemática e Tecnologias</option><option>Educação Digital e Computação</option><option>Projeto de Vida</option><option>Temas Transversais</option></select></label><label>Autor(a)/Formador(a) <input name="autor" placeholder="Identificação opcional" maxlength="90"></label></div>
-        <label>Resumo pedagógico <textarea name="descricao" rows="3" placeholder="Objetivos, metodologia e uso do recurso" maxlength="500" required></textarea></label>
-        <label>Link da prática <input name="url" type="url" placeholder="https://..." required></label>
-        <label>Como a IA foi utilizada (opcional) <textarea name="ia" rows="2" placeholder="Planejamento, adaptação, produção..." maxlength="300"></textarea></label>
-        <div class="form-actions"><button type="reset" class="outline-button">Limpar</button><button type="submit" class="filled-button">Salvar nesta prévia</button></div>
-      </form>
-      <div class="editor-export"><h3>Publicar o acervo</h3><p>Depois de cadastrar as práticas, exporte o arquivo e substitua <code>praticas.js</code> no repositório GitHub. As práticas publicadas serão vistas por todos.</p><div class="export-buttons"><button type="button" class="outline-button" id="exportarJS">Exportar praticas.js</button><button type="button" class="outline-button" id="exportarJSON">Exportar JSON</button><label class="upload-btn">Importar JSON<input type="file" id="importarJSON" accept=".json,application/json" hidden></label></div><p class="editor-feedback" id="editorFeedback" role="status" aria-live="polite"></p></div>
-      <div class="saved-list"><h3>Registros locais <span id="editCount">0</span></h3><div id="editItems"></div></div>
-    </div>
-  </dialog>
+  <script src="script.js"></script>
 </body>
 </html>
