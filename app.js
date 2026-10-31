@@ -33,7 +33,13 @@
     el('noResults').hidden=filtered.length!==0;
     el('resourceGrid').innerHTML=filtered.map(r=>{
       const num=pracsOf(r.id).length;
-      return `<article class="resource-card"><div class="logo-area"><img loading="lazy" decoding="async" src="${safe(r.icone)}" alt="Ícone ilustrativo de ${safe(r.nome)}"><i class="tiny-star"></i><i class="tiny-star"></i></div><h3>${safe(r.nome)}</h3><div class="mini-rule" aria-hidden="true"></div><p class="resource-description">${safe(r.descricao)}</p><div class="card-bottom"><span class="card-meta">${num} ${num===1?'prática cadastrada':'práticas cadastradas'}</span><button type="button" class="card-cta" data-open="${safe(r.id)}" aria-label="Ver práticas de ${safe(r.nome)}">Ver práticas <span aria-hidden="true">→</span></button></div>${r.revisarNome?'<span class="review-dot" title="Nome provisório: confirme a identificação no arquivo recursos.js" aria-label="Nome a confirmar">✧</span>':''}</article>`;
+      const temCapa = !!r.capa;
+      const classeCapa = temCapa ? ' resource-image-background' : '';
+      // Imagem de capa é aplicada ao cartão inteiro; NÃO há img dentro da logo-area.
+      // Neste modelo, GOO.jpg corresponde ao primeiro recurso (Google Docs).
+      const arte = temCapa ? '' : `<img loading="lazy" decoding="async" src="${safe(r.icone)}" alt="Ícone ilustrativo de ${safe(r.nome)}">`;
+      const estilo = temCapa ? ` style="--card-photo:url(&quot;${safe(r.capa)}&quot;)"` : '';
+      return `<article class="resource-card${classeCapa}"${estilo}><div class="logo-area">${arte}<i class="tiny-star"></i><i class="tiny-star"></i></div><h3>${safe(r.nome)}</h3><div class="mini-rule" aria-hidden="true"></div><p class="resource-description">${safe(r.descricao)}</p><div class="card-bottom"><span class="card-meta">${num} ${num===1?'prática cadastrada':'práticas cadastradas'}</span><button type="button" class="card-cta" data-open="${safe(r.id)}" aria-label="Ver práticas de ${safe(r.nome)}">Ver práticas <span aria-hidden="true">→</span></button></div>${r.revisarNome?'<span class="review-dot" title="Nome provisório: confirme a identificação no arquivo recursos.js" aria-label="Nome a confirmar">✧</span>':''}</article>`;
     }).join('');
     el('resourceGrid').querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>openResource(b.dataset.open)));
   }

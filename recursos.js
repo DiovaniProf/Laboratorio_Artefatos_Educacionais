@@ -1,5 +1,14 @@
-/* Catálogo visual: edite os nomes marcados para revisão quando necessário. */
+/* Catálogo dos 28 recursos. A primeira capa usa GOO.jpg como fundo completo. */
 window.OBS_RECURSOS = [
+  {
+    "id": "docs",
+    "nome": "Google Docs",
+    "categoria": "Produção e autoria",
+    "descricao": "Escrita colaborativa, revisão textual e produção de documentos.",
+    "icone": "assets/icons/docs.webp",
+    "revisarNome": false,
+    "capa": "GOO.jpg"
+  },
   {
     "id": "youtube",
     "nome": "YouTube",
@@ -30,14 +39,6 @@ window.OBS_RECURSOS = [
     "categoria": "Gestão e colaboração",
     "descricao": "Organização de turmas, atividades e devolutivas.",
     "icone": "assets/icons/classroom.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "docs",
-    "nome": "Google Docs",
-    "categoria": "Produção e autoria",
-    "descricao": "Escrita colaborativa e produção de documentos.",
-    "icone": "assets/icons/docs.webp",
     "revisarNome": false
   },
   {
