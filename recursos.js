@@ -1,228 +1,153 @@
-/* Catálogo dos 28 recursos. A primeira capa usa GOO.jpg como fundo completo. */
-window.OBS_RECURSOS = [
+/* Observatório de Práticas IA — Versão 3.2 — 25 ferramentas. */
+window.RECURSOS = [
   {
-    "id": "docs",
     "nome": "Google Docs",
+    "codigo": "GDO",
     "categoria": "Produção e autoria",
-    "descricao": "Escrita colaborativa, revisão textual e produção de documentos.",
-    "icone": "assets/icons/docs.webp",
-    "revisarNome": false,
-    "capa": "GOO.jpg"
+    "descricao": "Escrita colaborativa, revisão textual e produção de documentos."
   },
   {
-    "id": "youtube",
     "nome": "YouTube",
-    "categoria": "Vídeo e áudio",
-    "descricao": "Vídeos educativos, análises e produção audiovisual.",
-    "icone": "assets/icons/youtube.webp",
-    "revisarNome": false
+    "codigo": "YOU",
+    "categoria": "Vídeo e audiovisual",
+    "descricao": "Vídeos educativos, análises e produção audiovisual."
   },
   {
-    "id": "gemini",
-    "nome": "Gemini",
-    "categoria": "Inteligência Artificial",
-    "descricao": "Planejamento, criação de conteúdos e apoio à docência.",
-    "icone": "assets/icons/gemini.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "kahoot",
-    "nome": "Kahoot!",
-    "categoria": "Jogos e interatividade",
-    "descricao": "Questionários, jogos e avaliações gamificadas.",
-    "icone": "assets/icons/kahoot.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "classroom",
-    "nome": "Google Classroom",
-    "categoria": "Gestão e colaboração",
-    "descricao": "Organização de turmas, atividades e devolutivas.",
-    "icone": "assets/icons/classroom.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "slides",
     "nome": "Google Slides",
+    "codigo": "GSL",
     "categoria": "Produção e autoria",
-    "descricao": "Apresentações, sequências visuais e narrativas.",
-    "icone": "assets/icons/slides.webp",
-    "revisarNome": false
+    "descricao": "Apresentações interativas, aulas visuais e narrativas digitais."
   },
   {
-    "id": "sheets",
-    "nome": "Google Sheets",
-    "categoria": "Produção e autoria",
-    "descricao": "Planilhas, análise de dados e construção de gráficos.",
-    "icone": "assets/icons/sheets.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "sites",
-    "nome": "Google Sites",
-    "categoria": "Produção e autoria",
-    "descricao": "Sites pedagógicos, portfólios e páginas de projetos.",
-    "icone": "assets/icons/sites.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "forms",
-    "nome": "Google Forms",
-    "categoria": "Gestão e colaboração",
-    "descricao": "Diagnóstico, pesquisas e avaliação formativa.",
-    "icone": "assets/icons/forms.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "recurso-p",
-    "nome": "Recurso de atividades (P)",
-    "categoria": "Jogos e interatividade",
-    "descricao": "Atividades e desafios. Nome da ferramenta a confirmar.",
-    "icone": "assets/icons/p.webp",
-    "revisarNome": true
-  },
-  {
-    "id": "khan",
-    "nome": "Khan Academy",
-    "categoria": "Jogos e interatividade",
-    "descricao": "Trilhas, exercícios e apoio à aprendizagem.",
-    "icone": "assets/icons/khan.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "scratch",
     "nome": "Scratch",
+    "codigo": "SCR",
     "categoria": "Programação",
-    "descricao": "Programação em blocos, jogos e pensamento computacional.",
-    "icone": "assets/icons/scratch.webp",
-    "revisarNome": false
+    "descricao": "Programação em blocos, jogos e pensamento computacional."
   },
   {
-    "id": "chatgpt",
-    "nome": "ChatGPT",
+    "nome": "Gemini",
+    "codigo": "GEM",
     "categoria": "Inteligência Artificial",
-    "descricao": "Criação assistida, planejamento e reflexão pedagógica.",
-    "icone": "assets/icons/chatgpt.webp",
-    "revisarNome": false
+    "descricao": "Planejamento, criação de conteúdos e apoio à docência."
   },
   {
-    "id": "suno",
-    "nome": "Suno",
-    "categoria": "Vídeo e áudio",
-    "descricao": "Produção musical e experiências criativas com áudio.",
-    "icone": "assets/icons/suno.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "p5js",
-    "nome": "p5.js",
-    "categoria": "Programação",
-    "descricao": "Arte generativa, programação e projetos interativos.",
-    "icone": "assets/icons/p5js.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "canva",
-    "nome": "Canva",
-    "categoria": "Produção e autoria",
-    "descricao": "Materiais didáticos, infográficos e design visual.",
-    "icone": "assets/icons/canva.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "recurso-audio",
-    "nome": "Recurso de áudio",
-    "categoria": "Vídeo e áudio",
-    "descricao": "Produção e exploração de conteúdos sonoros. Nome a confirmar.",
-    "icone": "assets/icons/audio.webp",
-    "revisarNome": true
-  },
-  {
-    "id": "google-vids",
-    "nome": "Google Vids",
-    "categoria": "Vídeo e áudio",
-    "descricao": "Criação e edição de vídeos com recursos digitais.",
-    "icone": "assets/icons/vids.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "recurso-video",
-    "nome": "Recurso de vídeo",
-    "categoria": "Vídeo e áudio",
-    "descricao": "Criação audiovisual. Identificação exata a confirmar.",
-    "icone": "assets/icons/video.webp",
-    "revisarNome": true
-  },
-  {
-    "id": "capcut",
-    "nome": "CapCut",
-    "categoria": "Vídeo e áudio",
-    "descricao": "Edição de vídeos, legendas e narrativas audiovisuais.",
-    "icone": "assets/icons/capcut.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "padlet",
-    "nome": "Padlet",
-    "categoria": "Gestão e colaboração",
-    "descricao": "Murais colaborativos e registro de aprendizagens.",
-    "icone": "assets/icons/padlet.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "html-arquivo",
-    "nome": "HTML — arquivo",
-    "categoria": "Programação",
-    "descricao": "Estruturação de páginas e artefatos educacionais.",
-    "icone": "assets/icons/html-file.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "javascript-arquivo",
-    "nome": "JavaScript — arquivo",
-    "categoria": "Programação",
-    "descricao": "Interatividade em páginas e jogos educacionais.",
-    "icone": "assets/icons/js-file.webp",
-    "revisarNome": false
-  },
-  {
-    "id": "recurso-c",
-    "nome": "Recurso criativo (C)",
-    "categoria": "Produção e autoria",
-    "descricao": "Design ou criação digital. Nome da ferramenta a confirmar.",
-    "icone": "assets/icons/c.webp",
-    "revisarNome": true
-  },
-  {
-    "id": "mentimeter",
-    "nome": "Mentimeter",
+    "nome": "Kahoot!",
+    "codigo": "KAH",
     "categoria": "Jogos e interatividade",
-    "descricao": "Enquetes, nuvens de palavras e participação ativa.",
-    "icone": "assets/icons/menti.webp",
-    "revisarNome": false
+    "descricao": "Questionários, jogos e avaliações gamificadas."
   },
   {
-    "id": "html5",
-    "nome": "HTML5",
-    "categoria": "Programação",
-    "descricao": "Estrutura de páginas web e recursos educacionais.",
-    "icone": "assets/icons/html5.webp",
-    "revisarNome": false
+    "nome": "Google Classroom",
+    "codigo": "GCL",
+    "categoria": "Gestão e colaboração",
+    "descricao": "Organização de turmas, atividades e devolutivas."
   },
   {
-    "id": "javascript",
-    "nome": "JavaScript",
-    "categoria": "Programação",
-    "descricao": "Lógica, programação e interfaces interativas.",
-    "icone": "assets/icons/javascript.webp",
-    "revisarNome": false
+    "nome": "Google Forms",
+    "codigo": "GFO",
+    "categoria": "Gestão e colaboração",
+    "descricao": "Diagnósticos, pesquisas e avaliação formativa."
   },
   {
-    "id": "css3",
-    "nome": "CSS3",
+    "nome": "Google Sheets",
+    "codigo": "GSH",
+    "categoria": "Produção e autoria",
+    "descricao": "Planilhas, dados e gráficos para a aprendizagem."
+  },
+  {
+    "nome": "Google Sites",
+    "codigo": "GSI",
+    "categoria": "Produção e autoria",
+    "descricao": "Portfólios, páginas de projetos e curadoria digital."
+  },
+  {
+    "nome": "ChatGPT",
+    "codigo": "CHA",
+    "categoria": "Inteligência Artificial",
+    "descricao": "Criação assistida, planejamento e reflexão pedagógica."
+  },
+  {
+    "nome": "Suno",
+    "codigo": "SUN",
+    "categoria": "Vídeo e audiovisual",
+    "descricao": "Exploração musical, trilhas sonoras e experiências criativas."
+  },
+  {
+    "nome": "p5.js",
+    "codigo": "P5J",
     "categoria": "Programação",
-    "descricao": "Estilos, responsividade e design de aplicações web.",
-    "icone": "assets/icons/css3.webp",
-    "revisarNome": false
+    "descricao": "Arte generativa, visualização e projetos interativos."
+  },
+  {
+    "nome": "Canva",
+    "codigo": "CAN",
+    "categoria": "Produção e autoria",
+    "descricao": "Infográficos, apresentações e design de materiais."
+  },
+  {
+    "nome": "Google Vids",
+    "codigo": "GVI",
+    "categoria": "Vídeo e audiovisual",
+    "descricao": "Criação e edição de vídeos educacionais."
+  },
+  {
+    "nome": "CapCut",
+    "codigo": "CAP",
+    "categoria": "Vídeo e audiovisual",
+    "descricao": "Edição, legendas e narrativas audiovisuais."
+  },
+  {
+    "nome": "Padlet",
+    "codigo": "PAD",
+    "categoria": "Gestão e colaboração",
+    "descricao": "Murais colaborativos e registros de aprendizagem."
+  },
+  {
+    "nome": "Wayground",
+    "codigo": "WAY",
+    "categoria": "Jogos e interatividade",
+    "descricao": "Jogos, quizzes e avaliações gamificadas para engajar os estudantes e acompanhar a aprendizagem."
+  },
+  {
+    "nome": "Puzzel",
+    "codigo": "PUZ",
+    "categoria": "Jogos e interatividade",
+    "descricao": "Criação de palavras cruzadas, caça-palavras, quebra-cabeças e jogos interativos para atividades pedagógicas."
+  },
+  {
+    "nome": "Khan Academy",
+    "codigo": "KAC",
+    "categoria": "Jogos e interatividade",
+    "descricao": "Trilhas, exercícios e aprendizagem personalizada."
+  },
+  {
+    "nome": "Google Drive",
+    "codigo": "GDR",
+    "categoria": "Gestão e colaboração",
+    "descricao": "Armazenamento, organização e partilha de materiais."
+  },
+  {
+    "nome": "NotebookLM",
+    "codigo": "NLM",
+    "categoria": "Inteligência Artificial",
+    "descricao": "Estudos, resumos e organização de referências."
+  },
+  {
+    "nome": "GitHub",
+    "codigo": "GIT",
+    "categoria": "Programação e colaboração",
+    "descricao": "Hospedagem de projetos, versionamento de códigos e compartilhamento de práticas e recursos digitais."
+  },
+  {
+    "nome": "oCam",
+    "codigo": "OCA",
+    "categoria": "Vídeo e audiovisual",
+    "descricao": "Gravação da tela do computador para criação de tutoriais, demonstrações e videoaulas."
+  },
+  {
+    "nome": "CodePen",
+    "codigo": "CPE",
+    "categoria": "Programação",
+    "descricao": "Criação, teste e compartilhamento de projetos interativos em HTML, CSS e JavaScript."
   }
 ];

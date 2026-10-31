@@ -1,2 +1,1 @@
-/* Práticas públicas. Cadastre links no modo edição e exporte este arquivo para publicar no GitHub. */
-window.OBS_PRATICAS = [];
+window.PRATICAS = []; // registros de práticas publicados pelo administrador
