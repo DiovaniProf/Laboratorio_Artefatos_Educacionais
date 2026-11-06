@@ -1,32 +1,23 @@
-# OBSERVATÓRIO DE PRÁTICAS IA — Versão 3.3
+# Observatório de Práticas IA — versão 4.0
 
-## Atualização
-O catálogo possui 25 ferramentas. Foram mantidas as 22 ferramentas da versão 3.1 e acrescentados GitHub (`GIT.jpg`), oCam (`OCA.jpg`) e CodePen (`CPE.jpg`). Os textos e as categorias correspondem ao relatório DOCX 3.2.
+Nova navegação superior: **Página Principal**, **Artefatos Produzidos** e **Recados e Eventos**.
 
-## Publicação no GitHub Pages
-Envie para a **raiz** do repositório:
-- `index.html`
-- `styles.css`
-- `recursos.js`
-- `praticas.js`
-- `app.js`
-- As 25 imagens JPG nomeadas exatamente conforme a coluna `Sigla JPG` do relatório: letras maiúsculas, extensão `.jpg`.
+## Conteúdo das páginas
+- **Página Principal:** abertura institucional, links para o acervo e para eventos, orientações de propósito.
+- **Artefatos Produzidos:** mantém os **25 cartões originais**, busca, categorias, práticas e geração do relatório Word.
+- **Recados e Eventos:** quatro abas internas: Recados (8 cartões 16:9), Eventos da Semana (8 cartões 16:9), Eventos Agendados (8 cartões 16:9) e Links Educacionais (8 espaços, 3 preenchidos).
 
-As imagens JPG não estão incluídas no pacote; coloque os seus próprios arquivos 1728 × 2049 px na raiz.
-Se não houver uma imagem com o nome esperado, o cartão apresenta o fundo preto; o nome da ferramenta e o botão continuam funcionando.
+## Personalizar os novos informativos
+Edite `conteudos.js`. Cada item pode ter `titulo`, `descricao`, `imagem`, `url`, `data` e `selo`.
 
-## Relatório Word
-O botão DOWNLOAD DOCX na parte inferior do site gera um Word editável com os mesmos 25 recursos definidos em `recursos.js`. O arquivo `Relatorio_Textos_Observatorio.docx` também está incluído neste ZIP como referência. 
-Alterar o Word não modifica o site: após revisar os textos, atualize `recursos.js`.
+Exemplo para a primeira posição de `recados`:
+```js
+{titulo:'Comunicado da formação',descricao:'Encontro na próxima terça-feira',imagem:'REC01.jpg',url:'https://exemplo.org',selo:'IMPORTANTE'}
+```
+Suba a imagem 16:9 à raiz do repositório. Sem imagem, o espaço fica no padrão azul-marinho. Sem URL, não se exibe botão de acesso.
 
-## Práticas
-O arquivo `praticas.js` concentra os registros de práticas. Na ausência de registros, o botão 'Ver práticas' informa que o acervo ainda não contém práticas para a ferramenta.
+## Publicar no GitHub
+Envie os arquivos da raiz deste ZIP à raiz do GitHub: `index.html`, `styles.css`, `portal.css`, `app.js`, `portal.js`, `recursos.js`, `praticas.js`, `conteudos.js` e o relatório DOCX opcional. Mantenha as capas originais JPG de **1728 × 2049 px** na raiz; não estão incluídas no pacote.
 
-## Notas de design
-As imagens são utilizadas como fundo integral do cartão na proporção 1728:2049.
-Nenhum anel/suporte aparece abaixo dos ícones. As bordas, os textos, a iluminação sutil e os botões são criados por HTML e CSS.
-
-## Melhorias da versão 3.3
-- Tratamento de JPGs ausentes: o cartão permanece utilizável e indica a sigla.
-- Melhor legibilidade em telas pequenas: cartões em coluna única até 650px.
-- Mantidas as 25 ferramentas, os nomes JPG em caixa alta, o modal de práticas e o botão DOWNLOAD DOCX.
+## Cuidados
+O botão de exportação DOCX produz o relatório atualizado a partir de `recursos.js`. Alterar o arquivo Word não atualiza o site automaticamente. A agenda não é sincronizada com calendário externo; os espaços são editados no arquivo de conteúdo.

@@ -4,3 +4,22 @@
 @media (max-width:390px){.espaco-imagem{height:45%}.cartao{min-height:420px}}
 .imagem-ausente{background-image:none!important;background:linear-gradient(180deg,#132b46,#07172d)!important}
 .cartao:focus-within{box-shadow:0 0 0 2px #efd18b,0 12px 30px #0008}
+
+/* Imagem só é ativada depois de carregada. */
+.cartao.imagem-ausente{background-image:none!important}
+
+/* Versão 3.5: quatro cartões proporcionais até 1,5 cm de cada borda da página.
+   No CSS, 1cm equivale a ~37,8px em tela; 1,5cm = ~56,7px.
+   A regra dos cartões mantém 1728:2049, portanto largura e altura crescem juntas. */
+:root{--margem-lateral:1.5cm}
+@media (min-width:1101px){
+  .hero, main, footer{width:calc(100% - 2 * var(--margem-lateral));max-width:none;margin-left:auto;margin-right:auto}
+  main{padding:10px 0 50px}
+  .grade{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:22px;row-gap:22px}
+  .cartao{aspect-ratio:1728/2049;height:auto;min-height:0}
+  .hero{padding-left:0;padding-right:0}
+  .tools,.counter{max-width:100%}
+  footer{padding-left:0;padding-right:0}
+}
+/* Em telas de largura limitada, mantemos margens reduzidas e layout responsivo. */
+@media (min-width:751px) and (max-width:1100px){main,.hero,footer{width:calc(100% - 48px);max-width:none;margin-left:auto;margin-right:auto}main{padding-left:0;padding-right:0}}
